@@ -1041,3 +1041,21 @@ html {
 .footer-arriba:hover {
     color: #ffffff;
 }
+
+
+/* BAÑOS SOCIALES — FORMATO PANORÁMICO */
+
+.nr-social .nr-foto:last-child img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+@media (max-width: 850px) {
+    .nr-social .nr-foto:last-child img {
+        height: 240px;
+        object-fit: cover;
+        object-position: center 40%;
+    }
+}
