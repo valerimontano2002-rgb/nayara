@@ -1,0 +1,1043 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f4f0e8;
+    color: #243b32;
+}
+
+main {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(12, 30, 23, 0.35),
+            rgba(12, 30, 23, 0.65)),
+        url('imagenes/entrada.jpg') center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(5rem, 13vw, 11rem);
+    font-weight: 400;
+    letter-spacing: 0.13em;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+p:last-child {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #e4d1ab;
+}
+
+
+/* MENÚ SUPERIOR NAYARA */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #243b32;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    color: #f4f0e8;
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navegacion a {
+    color: #f4f0e8;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #d7c8ae;
+}
+
+/* SECCIONES */
+
+.seccion {
+    min-height: 75vh;
+    padding: 130px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f4f0e8;
+    color: #243b32;
+}
+
+.seccion.oscura {
+    background: #243b32;
+    color: #f4f0e8;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: #b38b5b;
+    margin-bottom: 28px;
+}
+
+.seccion h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.seccion p {
+    max-width: 630px;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 850px) {
+    .cabecera {
+        height: auto;
+        min-height: 75px;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .navegacion a {
+        font-size: 10px;
+    }
+
+    .seccion {
+        padding: 110px 8%;
+    }
+}
+
+
+/* ===================================
+   SECCIÓN EL PROYECTO — NAYARA
+=================================== */
+
+.proyecto {
+    background: #f4f0e8;
+    color: #243b32;
+    padding: 130px 8% 100px;
+    scroll-margin-top: 85px;
+}
+
+.proyecto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    align-items: center;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.proyecto-etiqueta {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    color: #b38b5b;
+    margin-bottom: 35px;
+}
+
+.proyecto-texto h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.proyecto-texto p {
+    font-size: 16px;
+    line-height: 1.95;
+    color: #526157;
+    margin-bottom: 20px;
+    max-width: 540px;
+}
+
+.proyecto-imagen {
+    overflow: hidden;
+    min-height: 520px;
+    background: #d7c8ae;
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.proyecto-imagen:hover img {
+    transform: scale(1.035);
+}
+
+/* CIFRAS DEL PROYECTO */
+
+.proyecto-cifras {
+    max-width: 1450px;
+    margin: 100px auto 0;
+    padding-top: 45px;
+    border-top: 1px solid #243b3240;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cifra {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.numero {
+    font-family: 'Italiana', serif;
+    font-size: clamp(50px, 6vw, 90px);
+    line-height: 1;
+    color: #243b32;
+}
+
+.descripcion {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #66756c;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 850px) {
+    .proyecto {
+        padding: 100px 7% 75px;
+    }
+
+    .proyecto-contenido {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .proyecto-imagen {
+        min-height: 350px;
+    }
+
+    .proyecto-imagen img {
+        height: 350px;
+    }
+
+    .proyecto-cifras {
+        margin-top: 60px;
+        gap: 15px;
+    }
+
+    .descripcion {
+        font-size: 9px;
+        letter-spacing: .08em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .proyecto-imagen img {
+        transition: none;
+    }
+}
+
+
+
+/* =================================
+   NATURALEZA — NAYARA
+================================= */
+
+.naturaleza {
+    background-color: #243b32;
+    color: #f4f0e8;
+    padding: 130px 8% 110px;
+    scroll-margin-top: 85px;
+}
+
+.naturaleza-intro {
+    max-width: 1000px;
+    margin: 0 auto 85px;
+    text-align: center;
+}
+
+.naturaleza-etiqueta {
+    display: block;
+    color: #d7c8ae;
+    font-size: 12px;
+    letter-spacing: .25em;
+    margin-bottom: 35px;
+}
+
+.naturaleza-intro h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(42px, 6vw, 85px);
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.naturaleza-intro h2 em {
+    display: block;
+    color: #d7c8ae;
+    font-weight: 400;
+}
+
+.naturaleza-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.95;
+    color: #d0d9d2;
+}
+
+/* Imagen principal */
+
+.naturaleza-principal {
+    position: relative;
+    max-width: 1450px;
+    margin: 0 auto 35px;
+    overflow: hidden;
+}
+
+.naturaleza-principal img {
+    display: block;
+    width: 100%;
+    height: min(65vw, 650px);
+    object-fit: cover;
+}
+
+.foto-etiqueta {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: white;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-shadow: 0 2px 10px #000a;
+}
+
+/* Galería de naturaleza */
+
+.naturaleza-galeria {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.naturaleza-foto {
+    min-width: 0;
+}
+
+.naturaleza-foto img {
+    display: block;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.naturaleza-foto span {
+    display: block;
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: #d7c8ae;
+}
+
+/* Cierre editorial */
+
+.naturaleza-cierre {
+    text-align: center;
+    padding-top: 110px;
+}
+
+.naturaleza-cierre p {
+    max-width: 700px;
+    margin: auto;
+    font-family: 'Italiana', serif;
+    font-size: clamp(30px, 4vw, 55px);
+    line-height: 1.3;
+}
+
+/* Adaptación móvil */
+
+@media (max-width: 850px) {
+    .naturaleza {
+        padding: 95px 6% 80px;
+    }
+
+    .naturaleza-intro {
+        margin-bottom: 45px;
+    }
+
+    .naturaleza-galeria {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .naturaleza-principal img {
+        height: 390px;
+    }
+
+    .naturaleza-foto img {
+        height: 340px;
+    }
+
+    .naturaleza-cierre {
+        padding-top: 75px;
+    }
+}
+
+/* ==================================
+   RESIDENCIAS — NAYARA
+================================== */
+
+.residencias {
+    background: #f4f0e8;
+    color: #243b32;
+    padding: 130px 8% 110px;
+    scroll-margin-top: 85px;
+}
+
+.residencias-intro {
+    max-width: 950px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.residencias-etiqueta {
+    display: block;
+    font-size: 12px;
+    letter-spacing: .25em;
+    color: #b38b5b;
+    margin-bottom: 30px;
+}
+
+.residencias-intro h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: 1.15;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.residencias-intro h2 em {
+    display: block;
+    color: #9b805f;
+    font-weight: 400;
+}
+
+.residencias-intro p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #526157;
+}
+
+/* DOS IMÁGENES */
+
+.residencias-galeria {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.residencias-bloque-imagen {
+    background: #e4ded3;
+    padding: 16px;
+}
+
+.residencias-bloque-imagen img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+}
+
+.imagen-caption {
+    display: block;
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: #66756c;
+}
+
+/* ESTADÍSTICAS */
+
+.residencias-datos {
+    max-width: 1250px;
+    margin: 80px auto;
+    padding-top: 45px;
+    border-top: 1px solid #243b3233;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.residencia-dato {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dato-numero {
+    font-family: 'Italiana', serif;
+    font-size: clamp(50px, 7vw, 95px);
+    line-height: 1;
+    color: #243b32;
+}
+
+.dato-descripcion {
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: #66756c;
+}
+
+/* CIERRE */
+
+.residencias-cierre {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.residencias-cierre p {
+    font-family: 'Italiana', serif;
+    font-size: clamp(30px, 4vw, 52px);
+}
+
+/* MÓVILES */
+
+@media (max-width: 850px) {
+    .residencias {
+        padding: 95px 6% 75px;
+    }
+
+    .residencias-intro {
+        margin-bottom: 45px;
+    }
+
+    .residencias-galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .residencias-bloque-imagen {
+        padding: 10px;
+    }
+
+    .residencias-bloque-imagen img {
+        height: 300px;
+    }
+
+    .residencias-datos {
+        margin: 55px auto;
+        gap: 15px;
+    }
+
+    .dato-descripcion {
+        font-size: 9px;
+        letter-spacing: .08em;
+    }
+
+    .residencias-cierre {
+        margin-top: 60px;
+    }
+}
+
+
+/* NAYARA — NUEVA SECCIÓN RESIDENCIAS */
+
+.nayara-residencias {
+    background: #f4f0e8;
+    color: #243b32;
+    padding: 125px 0 0;
+    scroll-margin-top: 85px;
+}
+
+.nr-intro {
+    max-width: 950px;
+    padding: 0 25px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.nr-etiqueta {
+    display: block;
+    color: #b38b5b;
+    font-size: 12px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.nr-intro h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(44px, 6vw, 85px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 28px;
+}
+
+.nr-intro h2 em {
+    display: block;
+    color: #9b805f;
+    font-weight: 400;
+}
+
+.nr-intro p {
+    max-width: 650px;
+    margin: auto;
+    color: #526157;
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+/* IMÁGENES GRANDES SIN RECORTES */
+
+.nr-foto {
+    width: 84%;
+    max-width: 1350px;
+    margin: 0 auto 65px;
+}
+
+.nr-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.nr-foto figcaption {
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: #66756c;
+}
+
+/* DATOS DEL PROYECTO */
+
+.nr-cifras {
+    width: 84%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 45px 0 75px;
+    border-top: 1px solid #243b3233;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.nr-cifras div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nr-cifras strong {
+    font-family: 'Italiana', serif;
+    font-size: clamp(50px, 7vw, 95px);
+    font-weight: 400;
+}
+
+.nr-cifras span {
+    font-size: 11px;
+    letter-spacing: .15em;
+    color: #66756c;
+}
+
+/* IMPLANTACIÓN */
+
+.nr-separacion {
+    margin-top: 100px;
+}
+
+.nr-plano {
+    margin-bottom: 130px;
+}
+
+/* PABELLÓN SOCIAL */
+
+.nr-social {
+    background: #243b32;
+    color: #f4f0e8;
+    padding: 125px 0 100px;
+}
+
+.nr-social .nr-intro h2 {
+    color: #f4f0e8;
+}
+
+.nr-social .nr-intro h2 em {
+    color: #d7c8ae;
+}
+
+.nr-social .nr-intro p {
+    color: #d0d9d2;
+}
+
+.nr-social .nr-foto {
+    margin-bottom: 85px;
+}
+
+.nr-social .nr-foto figcaption {
+    color: #d7c8ae;
+}
+
+.nr-espacios {
+    padding-top: 40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .nayara-residencias {
+        padding-top: 95px;
+    }
+
+    .nr-foto,
+    .nr-cifras {
+        width: 90%;
+    }
+
+    .nr-cifras {
+        gap: 12px;
+    }
+
+    .nr-cifras span {
+        font-size: 9px;
+        letter-spacing: .05em;
+    }
+
+    .nr-separacion {
+        margin-top: 65px;
+    }
+
+    .nr-plano {
+        margin-bottom: 85px;
+    }
+
+    .nr-social {
+        padding: 90px 0 50px;
+    }
+
+    .nr-social .nr-foto {
+        margin-bottom: 55px;
+    }
+}
+
+
+/* UNIFICAR FOTOGRAFÍAS DEL PABELLÓN */
+
+.nr-social .nr-foto {
+    width: 84%;
+    max-width: 1350px;
+    margin: 0 auto 65px;
+}
+
+.nr-social .nr-foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Eliminar separación extra antes de los baños */
+.nr-social .nr-foto:last-child {
+    margin-top: 0;
+}
+
+/* FOTO DEL BAÑO: un poco más corta */
+.nr-social .nr-foto:last-child img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==================================
+   UBICACIÓN — NAYARA
+================================== */
+
+.nayara-ubicacion {
+    background: #f4f0e8;
+    color: #243b32;
+    padding-top: 130px;
+    scroll-margin-top: 85px;
+}
+
+.ubicacion-intro {
+    max-width: 950px;
+    margin: 0 auto 70px;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.ubicacion-etiqueta {
+    color: #b38b5b;
+    font-size: 12px;
+    letter-spacing: .25em;
+}
+
+.ubicacion-intro h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(44px, 6vw, 85px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 30px 0;
+}
+
+.ubicacion-intro h2 em {
+    display: block;
+    color: #9b805f;
+    font-weight: 400;
+}
+
+.ubicacion-intro p {
+    max-width: 680px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.95;
+    color: #526157;
+}
+
+/* FOTO */
+
+.ubicacion-imagen {
+    width: 84%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.ubicacion-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.ubicacion-imagen figcaption {
+    margin-top: 18px;
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: #66756c;
+}
+
+/* INFORMACIÓN */
+
+.ubicacion-detalles {
+    width: 84%;
+    max-width: 1350px;
+    margin: 90px auto 120px;
+    padding-top: 45px;
+    border-top: 1px solid #243b3233;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.ubicacion-detalles span {
+    font-size: 11px;
+    letter-spacing: .2em;
+    color: #b38b5b;
+}
+
+.ubicacion-detalles h3 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.ubicacion-detalles p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #526157;
+}
+
+/* CIERRE FINAL */
+
+.ubicacion-cierre {
+    background:
+        linear-gradient(rgba(20, 45, 37, 0.55), rgba(20, 45, 37, 0.70)),
+        url('imagenes/cali2.jpg') center/cover no-repeat;
+    color: #f4f0e8;
+    text-align: center;
+    padding: 140px 25px;
+}
+
+.ubicacion-cierre-overlay {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ubicacion-cierre span {
+    font-family: 'Italiana', serif;
+    font-size: 32px;
+    letter-spacing: .18em;
+}
+
+.ubicacion-cierre h2 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(42px, 6vw, 80px);
+    font-weight: 400;
+    margin: 35px 0 25px;
+}
+
+.ubicacion-cierre .frase-principal {
+    color: #d7c8ae;
+    font-size: 15px;
+    letter-spacing: .08em;
+    margin-bottom: 18px;
+}
+
+.ubicacion-cierre .frase-cali {
+    color: #f4f0e8;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: .04em;
+}
+
+
+/* ==================================
+   FOOTER — NAYARA
+================================== */
+
+.nayara-footer {
+    background-color: #f4f0e8;
+    color: #526157;
+    padding: 35px 5% 40px;
+}
+
+.footer-contenido {
+    border-top: 1px solid #243b3240;
+    padding-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-copyright,
+.footer-concepto,
+.footer-arriba {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.17em;
+    font-weight: 400;
+}
+
+.footer-copyright {
+    text-align: left;
+}
+
+.footer-concepto {
+    text-align: center;
+}
+
+.footer-arriba {
+    text-align: right;
+    color: #526157;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-arriba:hover {
+    color: #b38b5b;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 850px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-copyright,
+    .footer-concepto,
+    .footer-arriba {
+        text-align: center;
+    }
+}
+
+
+/* FOOTER NAYARA — VERDE OSCURO */
+
+.nayara-footer {
+    background-color: #192d25;
+    color: #d7c8ae;
+}
+
+.footer-contenido {
+    border-top: 1px solid rgba(215, 200, 174, 0.35);
+}
+
+.footer-copyright,
+.footer-concepto,
+.footer-arriba {
+    color: #d7c8ae;
+}
+
+.footer-arriba:hover {
+    color: #ffffff;
+}
